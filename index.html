@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Dev Tasks</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/hamburgerMenu.css">
+    <script src="/assets/js/hm.js"></script>
+</head>
+
+<body>
+    <div class="">
+        <header class="bg">
+            <nav class="container nav">
+                <div class="nav-left">
+                    <div class="logo">
+                        <img src="/assets/image/logo.png" alt="">
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="">Features</a>
+                            </li>
+                            <li> <a href="">Pricing</a></li>
+                            <li> <a href="">Careers</a></li>
+                            <li> <a href="">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="badge">
+                        <img src="/assets/image/googleStoreBadge.png" alt="">
+                        <img src="/assets/image/appleStoreBadge.png " alt="">
+                    </div>
+                    <a class="mobile" href="javasctipt:;" onclick="toggleMenu()">&#9776;</a>
+                </div>
+            </nav>
+            <section>
+
+
+                <div>
+                    <h1>
+                        The easiest way to manage projects
+                    </h1>
+                    <p>
+                        From the small stuff to the big picture, organizes the work so teams know what to do, why it
+                        matters, and how to get it done.
+                    </p>
+                    <div>
+                        <button>
+
+                        </button>
+                        <button>
+
+                        </button>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </section>
+
+        </header>
+
+    </div>
+
+
+
+
+    <script>
+        function toggleMenu() {
+            var x = document.querySelector(".menu>ul");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
