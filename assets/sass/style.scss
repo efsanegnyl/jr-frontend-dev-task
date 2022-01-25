@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@import "_variables";
+
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+
+}
+
+.bg {
+    background: url(/assets/image/bg.png);
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    margin-left: 112px;
+    margin-right: 112px;
+
+}
+
+.nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo {
+            margin-right: 32px;
+        }
+
+        .menu {
+            ul {
+                display: flex;
+
+                @media screen and (max-width: $medium) {
+                    display: none;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 70px;
+                    background-color: $white;
+
+
+                    li {
+                        display: block;
+                        padding: 10px 15px;
+                    }
+                }
+
+
+                @media screen and (max-width: $small) {
+                    //do Smth
+                }
+
+                li {
+                    a {
+                        color: $neutral;
+                        font-family: Inter;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+
+                        padding: 4px 8px;
+                        margin: 8px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    &-right {
+        display: flex;
+
+    }
+}
