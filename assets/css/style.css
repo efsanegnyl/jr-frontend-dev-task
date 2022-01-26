@@ -4,17 +4,18 @@
 }
 
 .bg {
-  background: url(/assets/image/bg.png);
+  background: url(/assets/image/bg.png) no-repeat center center;
   width: 100%;
   height: 860px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .bg {
-    background: url(/assets/image/mediumBg.png);
+    background: url(/assets/image/mediumBg.png) no-repeat center;
     height: 1240px;
+    background-size: cover;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -76,6 +77,7 @@
     right: 0;
     top: 70px;
     background-color: #fff;
+    box-shadow: 5px 10px 20px #E5E7EB;
   }
   .nav-left .menu ul li {
     display: block;
@@ -91,6 +93,11 @@
   padding: 4px 8px;
   margin: 8px;
 }
+@media screen and (max-width: 768px) {
+  .nav-left .menu ul li a {
+    display: block;
+  }
+}
 .nav-right {
   display: flex;
 }
@@ -98,6 +105,7 @@
   display: flex;
   justify-content: space-between;
   width: 282px;
+  cursor: pointer;
 }
 @media screen and (max-width: 375px) {
   .nav-right .badge {
@@ -127,6 +135,12 @@ section .flex {
 }
 section .flex .content {
   padding-top: 96px;
+  margin-right: 32px;
+}
+@media screen and (max-width: 768px) {
+  section .flex .content {
+    padding: 80px 0;
+  }
 }
 section .flex .content .header h1 {
   font-style: normal;
@@ -136,6 +150,18 @@ section .flex .content .header h1 {
   letter-spacing: -0.025em;
   color: #111827;
   margin-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  section .flex .content .header h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 375px) {
+  section .flex .content .header h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
 }
 section .flex .content .header p {
   font-style: normal;
@@ -157,6 +183,7 @@ section .flex .content .buttons button {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
 }
 section .flex .content .buttons .purple {
   background-color: #7C3AED;
@@ -166,6 +193,121 @@ section .flex .content .buttons .purple {
 section .flex .content .buttons .white {
   background-color: transparent;
   color: #7C3AED;
+}
+section .flex .content .buttons .white img {
+  margin-right: 8px;
+}
+section .flex .phoneMockup {
+  width: 488px;
+  height: 640px;
+}
+@media screen and (max-width: 768px) {
+  section .flex .phoneMockup {
+    margin: auto auto;
+  }
+}
+
+.logoClouds {
+  padding: 16px 0;
+}
+.logoClouds .logos {
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #E5E7EB;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .logoClouds .logos {
+    width: 574px;
+  }
+}
+.logoClouds .logos .logo {
+  padding: 16px 0;
+  width: 120px;
+}
+.features {
+  padding: 96px 0;
+  margin-bottom: 32px;
+}
+.features .sectionHeading {
+  margin-bottom: 64px;
+}
+.features .sectionHeading .sectionTitle h2 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: #111827;
+  text-align: center;
+  letter-spacing: -0.025em;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+@media screen and (max-width: 768px) {
+  .features .sectionHeading .sectionTitle h2 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+.features .sectionHeading .description p {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  margin: 8px 0px;
+  padding: 0 108px;
+  color: #111827;
+}
+@media screen and (max-width: 768px) {
+  .features .sectionHeading .description p {
+    padding: 0;
+  }
+}
+.features .featureItems {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.features .featureItems .featureItem {
+  width: 360px;
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 768px) {
+  .features .featureItems .featureItem {
+    width: 300px;
+  }
+}
+.features .featureItems .featureIcon {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.features .featureItems .featureContent {
+  padding: 16px 0;
+}
+.features .featureItems .featureContentHeadline h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  color: #111827;
+  margin-bottom: 8px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .features .featureItems .featureContentHeadline h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.features .featureItems .featureContentDescription p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #374151;
 }
 
 /*# sourceMappingURL=style.css.map */
