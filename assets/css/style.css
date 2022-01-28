@@ -20,7 +20,7 @@
 }
 @media screen and (max-width: 375px) {
   .bg {
-    background: url(/assets/image/smallBg.png);
+    background: url(/assets/image/smallBg.png) no-repeat center;
     height: 1240px;
   }
 }
@@ -87,11 +87,13 @@
 .nav-left .menu ul li a {
   color: #111827;
   font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   padding: 4px 8px;
   margin: 8px;
+  font-family: Inter;
+  line-height: 20px;
+  font-feature-settings: "liga" off;
 }
 @media screen and (max-width: 768px) {
   .nav-left .menu ul li a {
@@ -136,6 +138,7 @@ section .flex {
 section .flex .content {
   padding-top: 96px;
   margin-right: 32px;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   section .flex .content {
@@ -198,12 +201,33 @@ section .flex .content .buttons .white img {
   margin-right: 8px;
 }
 section .flex .phoneMockup {
-  width: 488px;
-  height: 640px;
+  height: 100%;
+  padding: 0 65px;
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
 }
 @media screen and (max-width: 768px) {
   section .flex .phoneMockup {
+    width: 100%;
     margin: auto auto;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  section .flex .phoneMockup {
+    width: 100%;
+    padding: 0;
+  }
+}
+section .flex .phoneMockup img {
+  width: 320px;
+  padding-left: 2px;
+  box-shadow: 0px 24px 48px -12px #E5E7EB;
+}
+@media screen and (max-width: 375px) {
+  section .flex .phoneMockup img {
+    width: 100%;
   }
 }
 
@@ -222,6 +246,11 @@ section .flex .phoneMockup {
 @media screen and (max-width: 768px) {
   .logoClouds .logos {
     width: 574px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .logoClouds .logos {
+    width: 335px;
   }
 }
 .logoClouds .logos .logo {
@@ -271,9 +300,17 @@ section .flex .phoneMockup {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 375px) {
+  .features .featureItems {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+}
 .features .featureItems .featureItem {
   width: 360px;
   margin-bottom: 64px;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .features .featureItems .featureItem {
@@ -282,7 +319,6 @@ section .flex .phoneMockup {
 }
 .features .featureItems .featureIcon {
   margin-bottom: 24px;
-  text-align: center;
 }
 .features .featureItems .featureContent {
   padding: 16px 0;
@@ -294,7 +330,6 @@ section .flex .phoneMockup {
   line-height: 40px;
   color: #111827;
   margin-bottom: 8px;
-  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .features .featureItems .featureContentHeadline h3 {
@@ -308,6 +343,191 @@ section .flex .phoneMockup {
   font-size: 16px;
   line-height: 24px;
   color: #374151;
+}
+
+.testimanial {
+  background-color: #D5FAFC;
+  position: relative;
+}
+.testimanial .quote {
+  padding-top: 64px;
+  width: 142px;
+}
+.testimanialHeading {
+  position: absolute;
+  left: 216px;
+  top: 120px;
+}
+.testimanialHeading h3 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+  width: 488px;
+}
+.testimanialItems {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .testimanialItems {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .testimanialItems {
+    width: 335px;
+  }
+}
+.testimanialItems .testimanialItem {
+  background-color: white;
+  padding: 32px;
+  color: #111827;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px -2px rgba(17, 24, 39, 0.1), 0px 2px 4px -2px rgba(17, 24, 39, 0.06);
+}
+.testimanialItems .testimanialItemLogo {
+  margin-bottom: 32px;
+}
+.testimanialItems .testimanialItemContent {
+  display: flex;
+}
+.testimanialItems .testimanialItemContent .quoteMark {
+  width: 55px;
+  margin-top: -10px;
+  margin-right: 16px;
+}
+.testimanialItems .testimanialItemContent .quoteMark img {
+  width: 100%;
+}
+.testimanialItems .testimanialItemContent .feedback {
+  margin-bottom: 24px;
+}
+.testimanialItems .testimanialItemContent .feedback h3 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.testimanialItems .testimanialItemContent .feedback p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.testimanialItems .testimanialItemContent .personDetails h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+}
+.testimanialItems .testimanialItemContent .personDetails p {
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "liga" off;
+  color: #6B7280;
+}
+.testimanialItems .left {
+  width: 50%;
+  margin-right: 36px;
+}
+@media screen and (max-width: 768px) {
+  .testimanialItems .left {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.testimanialItems .left .testimanialItem {
+  width: 300px;
+  margin-top: 140px;
+  margin-left: 208px;
+}
+@media screen and (max-width: 768px) {
+  .testimanialItems .left .testimanialItem {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+.testimanialItems .two {
+  width: 300px;
+  margin-bottom: 96px;
+}
+@media screen and (max-width: 768px) {
+  .testimanialItems .two {
+    width: 100%;
+    order: 2;
+  }
+}
+.testimanialItems .two .quoteMark {
+  width: 15px;
+}
+.testimanialItems .one {
+  width: 420px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 768px) {
+  .testimanialItems .one {
+    width: 100%;
+  }
+}
+.testimanialItems .one .quoteMark {
+  width: 25px;
+}
+.testimanialItems .right {
+  width: 50%;
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .testimanialItems .right {
+    width: 100%;
+  }
+}
+footer {
+  background-color: #000;
+}
+footer .flex {
+  display: flex;
+  padding: 64px 0;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  footer .flex {
+    padding: 40px 0;
+    display: block;
+  }
+}
+footer .leftSection .logo {
+  margin-bottom: 24px;
+}
+footer .leftSection .links nav {
+  margin-bottom: 12px;
+}
+footer .leftSection .links nav:last-child {
+  margin-bottom: 24px;
+}
+footer .leftSection .links nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 375px) {
+  footer .leftSection .links nav ul li:nth-child(3) {
+    margin-bottom: 12px;
+  }
+}
+footer .leftSection .links nav ul li a {
+  color: #fff;
+  margin-right: 24px;
+}
+footer .leftSection div {
+  color: #D1D5DB;
+}
+@media screen and (max-width: 375px) {
+  footer .leftSection div {
+    margin-bottom: 24px;
+  }
+}
+footer .downloadBadges div {
+  color: #D1D5DB;
+  margin-bottom: 16px;
+}
+footer .downloadBadges .badges .badge {
+  margin-bottom: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
