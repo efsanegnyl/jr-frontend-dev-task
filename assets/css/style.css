@@ -20,8 +20,7 @@
 }
 @media screen and (max-width: 375px) {
   .bg {
-    background: url(/assets/image/smallBg.png) no-repeat center;
-    height: 1240px;
+    background: url(/assets/image/smallBg.png) no-repeat;
   }
 }
 
@@ -188,6 +187,11 @@ section .flex .content .buttons button {
   line-height: 24px;
   cursor: pointer;
 }
+@media screen and (max-width: 375px) {
+  section .flex .content .buttons button {
+    font-size: 14px;
+  }
+}
 section .flex .content .buttons .purple {
   background-color: #7C3AED;
   color: #fff;
@@ -223,7 +227,7 @@ section .flex .phoneMockup {
 section .flex .phoneMockup img {
   width: 320px;
   padding-left: 2px;
-  box-shadow: 0px 24px 48px -12px #E5E7EB;
+  box-shadow: 0px 24px 48px -12px rgba(17, 24, 39, 0.25);
 }
 @media screen and (max-width: 375px) {
   section .flex .phoneMockup img {
@@ -308,13 +312,18 @@ section .flex .phoneMockup img {
   }
 }
 .features .featureItems .featureItem {
-  width: 360px;
+  width: 33%;
   margin-bottom: 64px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .features .featureItems .featureItem {
-    width: 300px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .features .featureItems .featureItem {
+    width: 100%;
   }
 }
 .features .featureItems .featureIcon {
@@ -353,10 +362,23 @@ section .flex .phoneMockup img {
   padding-top: 64px;
   width: 142px;
 }
+@media screen and (max-width: 768px) {
+  .testimanial .quote {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 142px;
+  }
+}
 .testimanialHeading {
   position: absolute;
   left: 216px;
   top: 120px;
+}
+@media screen and (max-width: 768px) {
+  .testimanialHeading {
+    left: 40px;
+  }
 }
 .testimanialHeading h3 {
   font-weight: bold;
@@ -365,119 +387,134 @@ section .flex .phoneMockup img {
   letter-spacing: -0.025em;
   width: 488px;
 }
+@media screen and (max-width: 768px) {
+  .testimanialHeading h3 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.025em;
+    width: 100%;
+  }
+}
 .testimanialItems {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2, 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-bottom: 96px;
 }
 @media screen and (max-width: 768px) {
   .testimanialItems {
     display: flex;
     flex-direction: column;
+    padding-bottom: 56px;
   }
 }
-@media screen and (max-width: 375px) {
-  .testimanialItems {
-    width: 335px;
-  }
-}
-.testimanialItems .testimanialItem {
-  background-color: white;
+.testimanial .testimanialItem {
+  background-color: #fff;
   padding: 32px;
-  color: #111827;
-  border-radius: 8px;
   box-shadow: 0px 4px 8px -2px rgba(17, 24, 39, 0.1), 0px 2px 4px -2px rgba(17, 24, 39, 0.06);
-}
-.testimanialItems .testimanialItemLogo {
-  margin-bottom: 32px;
-}
-.testimanialItems .testimanialItemContent {
-  display: flex;
-}
-.testimanialItems .testimanialItemContent .quoteMark {
-  width: 55px;
-  margin-top: -10px;
-  margin-right: 16px;
-}
-.testimanialItems .testimanialItemContent .quoteMark img {
-  width: 100%;
-}
-.testimanialItems .testimanialItemContent .feedback {
+  border-radius: 8px;
   margin-bottom: 24px;
 }
-.testimanialItems .testimanialItemContent .feedback h3 {
+@media screen and (max-width: 768px) {
+  .testimanial .testimanialItem {
+    margin-right: 0;
+    width: 100%;
+    padding: 32px;
+  }
+}
+.testimanial .testimanialItemLogo {
+  margin-bottom: 32px;
+}
+.testimanial .testimanialItemContent {
+  display: flex;
+  height: 100%;
+}
+.testimanial .testimanialItemContent .feedback {
+  margin-bottom: 24px;
+}
+.testimanial .testimanialItemContent .feedback h3 {
   font-size: 18px;
   line-height: 28px;
 }
-.testimanialItems .testimanialItemContent .feedback p {
+.testimanial .testimanialItemContent .feedback p {
   font-size: 18px;
   line-height: 28px;
 }
-.testimanialItems .testimanialItemContent .personDetails h2 {
+.testimanial .testimanialItemContent .personDetails h2 {
   font-weight: bold;
   font-size: 18px;
   line-height: 28px;
 }
-.testimanialItems .testimanialItemContent .personDetails p {
+.testimanial .testimanialItemContent .personDetails p {
   font-size: 14px;
   line-height: 20px;
   font-feature-settings: "liga" off;
   color: #6B7280;
 }
-.testimanialItems .left {
-  width: 50%;
-  margin-right: 36px;
-}
-@media screen and (max-width: 768px) {
-  .testimanialItems .left {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-.testimanialItems .left .testimanialItem {
+.testimanial .testimanialItem.first {
+  margin-top: 100px;
   width: 300px;
-  margin-top: 140px;
   margin-left: 208px;
 }
+.testimanial .testimanialItem.first .quoteMark {
+  margin-right: 14px;
+  margin-top: -5px;
+}
 @media screen and (max-width: 768px) {
-  .testimanialItems .left .testimanialItem {
-    width: 100%;
+  .testimanial .testimanialItem.first {
     margin-top: 0;
     margin-left: 0;
-  }
-}
-.testimanialItems .two {
-  width: 300px;
-  margin-bottom: 96px;
-}
-@media screen and (max-width: 768px) {
-  .testimanialItems .two {
     width: 100%;
     order: 2;
   }
 }
-.testimanialItems .two .quoteMark {
-  width: 15px;
+.testimanial .testimanialItem.secondary {
+  width: 400px;
+  height: 340px;
 }
-.testimanialItems .one {
-  width: 420px;
-  margin-bottom: 32px;
-}
-@media screen and (max-width: 768px) {
-  .testimanialItems .one {
-    width: 100%;
-  }
-}
-.testimanialItems .one .quoteMark {
-  width: 25px;
-}
-.testimanialItems .right {
-  width: 50%;
-  margin-top: 30px;
+.testimanial .testimanialItem.secondary .quoteMark {
+  margin-right: 14px;
+  margin-top: -5px;
 }
 @media screen and (max-width: 768px) {
-  .testimanialItems .right {
+  .testimanial .testimanialItem.secondary {
+    margin-top: 240px;
+    margin-left: 0;
     width: 100%;
+    height: 100%;
+    order: 1;
   }
 }
+.testimanial .testimanialItem.third {
+  margin-top: -210px;
+  width: 324px;
+}
+.testimanial .testimanialItem.third .quoteMark {
+  margin-right: 14px;
+  margin-top: -5px;
+}
+@media screen and (max-width: 768px) {
+  .testimanial .testimanialItem.third {
+    width: 100%;
+    margin-top: 0;
+    order: 3;
+  }
+}
+.testimanial .testimanialItem.none {
+  visibility: hidden;
+  padding: 0;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .testimanial .testimanialItem.none {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
 footer {
   background-color: #000;
 }

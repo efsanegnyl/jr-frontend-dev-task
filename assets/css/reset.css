@@ -138,4 +138,8 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /*# sourceMappingURL=reset.css.map */
