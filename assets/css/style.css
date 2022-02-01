@@ -12,7 +12,7 @@
 }
 @media screen and (max-width: 768px) {
   .bg {
-    background: url(/assets/) no-repeat center;
+    background: url(assets/image/mediumBg.png) no-repeat center;
     height: 1240px;
     background-size: cover;
     margin-bottom: 20px;
@@ -20,7 +20,7 @@
 }
 @media screen and (max-width: 375px) {
   .bg {
-    background: url(/assets/image/smallBg.png) no-repeat;
+    background: url(assets/image/smallBg.png) no-repeat;
   }
 }
 
@@ -261,7 +261,6 @@ section .flex .phoneMockup img {
   padding: 16px 0;
   width: 120px;
 }
-
 .features {
   padding: 96px 0;
   margin-bottom: 32px;
